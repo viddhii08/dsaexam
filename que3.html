@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let q = [];
+        let currentSize = q.length;
+        let max = 5;
+        function eq(val){
+            if(currentSize>= max){
+                alert("Q is full");
+            }
+            q[currentSize] = val;
+            currentSize++;
+
+        }
+        function dis(){
+            console.log(q);
+        }
+        function dq(){
+            if(currentSize > 0){
+                for(let i=0; i < q.length;i++){
+                    q[i]=q[i+1];
+                }
+                currentSize--;
+                q.length = currentSize;
+            }else{
+                alert('Q is empty')
+            }
+        }
+        eq(10);
+        eq(20);
+        eq(25);
+        eq(11);
+        eq(21);
+        dq();
+        dq();
+    </script>
+</body>
+</html>
